@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto Mono',monospace;
   text-align:center;
-  background-image: url('https://cdn.wallpapersafari.com/38/65/Fcx7LA.jpg');
+  background-image: url('https://i.pinimg.com/originals/a7/fc/aa/a7fcaa43650adc892c401956a08dc32a.jpg');
   background-color: #000000;
   background-size: cover;
   background-position: center top;
@@ -36,22 +36,40 @@ body {
 
 #listaFilmes img {
   margin: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71);
+}
+
+#listaFilmes img:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+
+  border: 2px double rgb(0, 215, 230);
+
+
 }
 
 .form-wrapper {
   margin: 0 0 15px;
+  
 }
 
 .form-wrapper input {
   display: block;
   margin: 0 auto;
   padding: 10px 15px;
+  border: 2px solid rgb(0, 217, 255);
+  border-radius: 4px;
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71);
 }
 
 .form-wrapper button {
   border: 0;
   color: #ffffff;
-  background: #6d008f;
+  background-image: linear-gradient(to left, rgb(0, 247, 255), rgb(0, 110, 255));
   font-weight:bold;
   padding: 15px 20px;
   font-size: 16px;
@@ -59,8 +77,37 @@ body {
   margin-top: 20px;
   cursor: pointer;
   transition: .3s;
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71);
 }
 
 .form-wrapper button:hover {
   opacity:.8;
 }
+
+#yt {
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71);
+  
+  border-radius: 4px;
+  background-image: linear-gradient(to right, rgb(0, 247, 255), rgb(0, 102, 255));
+  border: 0;
+}
+
+#resultado {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.71);
+  background-image: radial-gradient(rgb(105, 105, 105), rgb(49, 49, 49));
+  color: rgb(255, 255, 255);
+  font-weight:bold;
+
+  
+}
+
+.git-logo {
+    width: 60px;
+
+}
+

@@ -11,6 +11,11 @@ function adicionarFilme() {
         url: 'https://api.themoviedb.org/3/search/movie?api_key=6ac040cdb08ce2085e436dba651a25aa&language=pt-BR&query=' + nomeDoFilme}
   
       axios.request(options).then(function (response) {
+          // VERIFICANDO RESULTADO
+          //var resultadoNoHTML = document.getElementById("resultado")
+          //var resultado = "! FILME ENCONTRADO COM SUCESSO !"
+          //resultadoNoHTML.innerHTML = resultado
+        
           // PEGANDO INFOS DO FILME
           var dataDoFilme = response.data["results"][0]
           var idDoFilme = dataDoFilme["id"]
@@ -23,6 +28,7 @@ function adicionarFilme() {
             url: 'https://api.themoviedb.org/3/movie/' + idDoFilme + '/videos?api_key=6ac040cdb08ce2085e436dba651a25aa&language=en-US'}
       
           axios.request(options).then(function (response) {
+
             // COLOCANDO O LINK DO TRAILER NO HTML
             var keyDoTrailer = response.data["results"][0]["key"]
             var video = "https://www.youtube.com/embed/" + keyDoTrailer
@@ -44,7 +50,9 @@ function adicionarFilme() {
         
       }).catch(function (error) {
           console.error(error);
-          alert("Filme não encontrado! Digite outro!")
+          var resultadoNoHTML = document.getElementById("resultado")
+          var resultado = "! FILME NÃO ENCONTRADO. Digite outro !"
+          resultadoNoHTML.innerHTML = resultado
       });
   
   campoDoFilme.value = ""
@@ -55,4 +63,7 @@ function adicionarFilme() {
 function mudarVideo(numeroDoFilme) {
     var trailer = document.getElementById("yt")
     trailer.src = listaLinks[numeroDoFilme]
+    var resultadoNoHTML = document.getElementById("resultado")
+    var resultado = ""
+    resultadoNoHTML.innerHTML = resultado
 }   
